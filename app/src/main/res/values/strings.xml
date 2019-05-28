@@ -2,7 +2,7 @@
     <string name="app_name">SMGProyect</string>
     <string name="smartgreenhouse">SmartGreenHouse</string>
     <string name="soluciones_para_tu_invernadero">Soluciones para tu invernadero</string>
-    <string name="usuario">Usuario</string>
     <string name="ingresar">Ingresar</string>
-    <string name="password">Password</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="usuario">Usuario</string>
 </resources>

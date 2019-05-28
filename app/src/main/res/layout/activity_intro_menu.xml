@@ -7,7 +7,7 @@
     tools:context=".IntroMenu">
 
     <TextView
-        android:id="@+id/lblTitleLogin"
+        android:id="@+id/lbl_titleLoginMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/smartgreenhouse"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.523" />
 
     <TextView
-        android:id="@+id/lblDescLogin"
+        android:id="@+id/lbl_descLoginMenu"
         android:layout_width="196dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
@@ -35,36 +35,33 @@
         app:layout_constraintVertical_bias="0.571" />
 
     <EditText
-        android:id="@+id/txtPassLogin"
+        android:id="@+id/txt_passLoginMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="616dp"
         android:layout_marginTop="304dp"
-        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="@string/contrase_a"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="o" />
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <EditText
-        android:id="@+id/txtUserLogin"
+        android:id="@+id/txt_UserLoginMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="616dp"
         android:layout_marginTop="216dp"
-        android:autofillHints=""
         android:ems="10"
         android:hint="@string/usuario"
         android:inputType="textPersonName"
-        android:text="@string/usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="o" />
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_LoginMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="672dp"
