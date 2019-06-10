@@ -15,4 +15,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="bgbackgroundimage">bgBackgroundImage</string>
+    <string name="reportlabel">Reportes</string>
+    <string name="indicatorlabel">Indicadores</string>
+    <string name="bgindicators">bgindicators</string>
+    <string name="bgreports">bgreports</string>
 </resources>
