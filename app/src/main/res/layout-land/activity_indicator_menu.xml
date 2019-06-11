@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8FB783"
+    tools:context=".indicatorMenu">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="249dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="76dp"
+        android:background="#C7CF98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_IndicatorHS"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_IndicatorHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bajo"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorHS"
+        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorHS"
+        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorHS"
+        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorHS" />
+
+    <TextView
+        android:id="@+id/lbl_TitleIndicatorHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Humedad del Suelo"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHS" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="249dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="76dp"
+        android:background="#C7CF98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_IndicatorTemp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_IndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medio"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorTemp"
+        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorTemp"
+        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorTemp" />
+
+    <TextView
+        android:id="@+id/lbl_TitleIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Temperatura"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorTemp" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="249dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="324dp"
+        android:background="#C7CF98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_IndicatorLight"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="340dp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_IndicatorLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Optimo"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorLight"
+        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorLight"
+        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorLight"
+        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorLight" />
+
+    <TextView
+        android:id="@+id/lbl_TitleIndicatorLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Nivel de Luz"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorLight" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="249dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="324dp"
+        android:background="#C7CF98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prb_IndicatorHR"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="340dp"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_IndicatorHR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crítico"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorHR"
+        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorHR"
+        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorHR"
+        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorHR" />
+
+    <TextView
+        android:id="@+id/lbl_TitleIndicatorHR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Humedad ambiental"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHR" />
+
+    <Button
+        android:id="@+id/btn_InterfaceBack"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_background"
+        android:text="Volver"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ImportIndicators"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_ImportIndicators"
+        app:layout_constraintTop_toBottomOf="@+id/txt_DescIndicators" />
+
+    <Button
+        android:id="@+id/btn_ImportIndicators"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/btn_background"
+        android:text="Importar indicadores"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="145dp"
+        android:layout_marginBottom="6dp"
+        android:text="INDICADORES"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_DescIndicators"
+        app:layout_constraintEnd_toEndOf="@+id/txt_DescIndicators"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="@+id/txt_DescIndicators"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_DescIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="107dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_InterfaceBack"
+        app:layout_constraintEnd_toEndOf="@+id/btn_InterfaceBack"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/btn_InterfaceBack"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Title"
+        tools:text="Selecciona tu medición" />
+
+</android.support.constraint.ConstraintLayout>
