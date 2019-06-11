@@ -23,4 +23,16 @@
     <string name="title_activity_indicator_menu">indicatorMenu</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="indicatormedium">Medio</string>
+    <string name="indicatorlow">Bajo</string>
+    <string name="titlehs">Humedad del Suelo</string>
+    <string name="titletemp">Temperatura</string>
+    <string name="indicatorgood">Optimo</string>
+    <string name="titlelight">Nivel de Luz</string>
+    <string name="indicatorbad">Crítico</string>
+    <string name="titlehr">Humedad ambiental</string>
+    <string name="btnback">Volver</string>
+    <string name="btnimport">Importar indicadores</string>
+    <string name="titlepanel">INDICADORES</string>
+    <string name="descpanel">TextView</string>
 </resources>

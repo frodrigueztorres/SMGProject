@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminMenu">
+
+    <ImageView
+        android:id="@+id/iw_btnAdminIndicators"
+        android:layout_width="320dp"
+        android:layout_height="600dp"
+        app:srcCompat="@android:color/holo_blue_bright"
+        tools:layout_editor_absoluteX="638dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/lblAdminUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="736dp"
+        android:scrollbarSize="25dp"
+        android:text="@string/usuario"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textScaleX="bold"
+        android:textSize="42dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iw_btnAdminIndicators"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iw_btnAdminIndicators" />
+
+    <ImageView
+        android:id="@+id/iw_btnAdminIndicators"
+        android:layout_width="320dp"
+        android:layout_height="600dp"
+        android:background="@android:color/holo_green_light"
+        android:contentDescription="@string/bgindicators"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/lblLabelAdminIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/indicatorlabel"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iw_btnAdminIndicators"
+        app:layout_constraintTop_toTopOf="@+id/iw_btnAdminIndicators"
+        tools:layout_editor_absoluteX="50dp" />
+
+    <ImageView
+        android:id="@+id/iw_btnAdminReports"
+        android:layout_width="320dp"
+        android:layout_height="600dp"
+        android:layout_marginEnd="324dp"
+        android:background="@android:color/holo_red_dark"
+        android:contentDescription="@string/bgreports"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblLabelAdminReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reportlabel"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iw_btnAdminReports"
+        app:layout_constraintEnd_toEndOf="@+id/iw_btnAdminReports"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/iw_btnAdminReports"
+        app:layout_constraintTop_toTopOf="@+id/iw_btnAdminReports" />
+
+</android.support.constraint.ConstraintLayout>

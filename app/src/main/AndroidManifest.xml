@@ -10,7 +10,8 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".indicatorMenu"></activity>
+        <activity android:name=".adminMenu"></activity>
+        <activity android:name=".indicatorMenu" />
         <activity android:name=".userMenu" />
         <activity
             android:name=".ui.login.IntroMenu"
