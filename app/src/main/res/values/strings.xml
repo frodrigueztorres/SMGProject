@@ -35,4 +35,6 @@
     <string name="btnimport">Importar indicadores</string>
     <string name="titlepanel">INDICADORES</string>
     <string name="descpanel">TextView</string>
+    <string name="interfaceAdminUsers">AdminUsers</string>
+    <string name="interfaceAdminRegistry">AdminRegistry</string>
 </resources>
