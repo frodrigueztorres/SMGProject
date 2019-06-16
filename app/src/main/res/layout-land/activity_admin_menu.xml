@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iw_btnAdminReports"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/lblAdminUsers"
@@ -31,7 +31,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/iw_btnAdminIndicators"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/iw_btnAdminIndicators" />
+        app:layout_constraintTop_toTopOf="@+id/iw_btnAdminIndicators"/>
 
     <ImageView
         android:id="@+id/iw_btnAdminIndicators"
