@@ -48,4 +48,6 @@
     <string name="nombre">Nombre</string>
     <string name="repetir_contrase_a">Repetir contraseña</string>
     <string name="editar_usuario">Editar Usuario</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
 </resources>
