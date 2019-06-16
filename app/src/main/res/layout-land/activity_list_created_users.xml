@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8FB783"
+    tools:context=".ListCreatedUsers">
+
+    <TextView
+        android:id="@+id/lbl_TitleUserList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:text="@string/lista_de_usuarios"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_CreateUser"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/btn_background"
+        android:text="@string/crear_usuario"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_BackListUsers"
+        app:layout_constraintStart_toEndOf="@+id/rv_ListCreatedUsers"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_BackListUsers"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="157dp"
+        android:background="@drawable/btn_background"
+        android:text="@string/btnback"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rv_ListCreatedUsers"
+        app:layout_constraintTop_toBottomOf="@+id/btn_CreateUser" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_ListCreatedUsers"
+        android:layout_width="516dp"
+        android:layout_height="374dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_CreateUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_TitleUserList" />
+</android.support.constraint.ConstraintLayout>

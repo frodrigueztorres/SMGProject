@@ -37,4 +37,15 @@
     <string name="descpanel">TextView</string>
     <string name="interfaceAdminUsers">AdminUsers</string>
     <string name="interfaceAdminRegistry">AdminRegistry</string>
+    <string name="registro_hist_rico">Registro Histórico</string>
+    <string name="detalle_humedad_del_suelo">Detalle Humedad del suelo</string>
+    <string name="_20">20</string>
+    <string name="lista_de_usuarios">Lista de usuarios</string>
+    <string name="crear_usuario">Crear Usuario</string>
+    <string name="apellido">Apellido</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="nombre">Nombre</string>
+    <string name="repetir_contrase_a">Repetir contraseña</string>
+    <string name="editar_usuario">Editar Usuario</string>
 </resources>

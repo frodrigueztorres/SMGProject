@@ -7,6 +7,12 @@
     android:background="#8FB783"
     tools:context=".IndicatorsMenu">
 
+    <android.support.constraint.Group
+        android:id="@+id/grp_IndicatorHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="view,prb_IndicatorHS,lbl_IndicatorHS,lbl_TitleIndicatorHS" />
+
     <View
         android:id="@+id/view"
         android:layout_width="249dp"
@@ -54,6 +60,12 @@
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHS" />
+
+    <android.support.constraint.Group
+        android:id="@+id/grp_IndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="lbl_TitleIndicatorTemp,view2,prb_IndicatorTemp,lbl_IndicatorTemp" />
 
     <View
         android:id="@+id/view2"
@@ -103,6 +115,12 @@
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorTemp" />
 
+    <android.support.constraint.Group
+        android:id="@+id/grp_IndicatorLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="prb_IndicatorLight,lbl_IndicatorLight,view3,lbl_TitleIndicatorLight" />
+
     <View
         android:id="@+id/view3"
         android:layout_width="249dp"
@@ -150,6 +168,12 @@
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorLight" />
+
+    <android.support.constraint.Group
+        android:id="@+id/grp_IndicatorHR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="lbl_IndicatorHR,view4,lbl_TitleIndicatorHR,prb_IndicatorHR" />
 
     <View
         android:id="@+id/view4"
