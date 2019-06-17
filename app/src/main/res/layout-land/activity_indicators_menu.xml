@@ -7,30 +7,14 @@
     android:background="#8FB783"
     tools:context=".IndicatorsMenu">
 
-    <android.support.constraint.Group
-        android:id="@+id/grp_IndicatorHS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="view,prb_IndicatorHS,lbl_IndicatorHS,lbl_TitleIndicatorHS" />
-
     <View
-        android:id="@+id/view"
+        android:id="@+id/vw_IndicatorHS"
         android:layout_width="249dp"
         android:layout_height="211dp"
         android:layout_marginStart="47dp"
         android:layout_marginTop="76dp"
         android:background="#C7CF98"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/prb_IndicatorHS"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="137dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="90dp"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -46,6 +30,16 @@
         app:layout_constraintStart_toStartOf="@+id/prb_IndicatorHS"
         app:layout_constraintTop_toTopOf="@+id/prb_IndicatorHS" />
 
+    <ProgressBar
+        android:id="@+id/prb_IndicatorHS"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/lbl_TitleIndicatorHS"
         android:layout_width="wrap_content"
@@ -56,19 +50,13 @@
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorHS"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHS" />
 
-    <android.support.constraint.Group
-        android:id="@+id/grp_IndicatorTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="lbl_TitleIndicatorTemp,view2,prb_IndicatorTemp,lbl_IndicatorTemp" />
-
     <View
-        android:id="@+id/view2"
+        android:id="@+id/vw_IndicatorTemp"
         android:layout_width="249dp"
         android:layout_height="211dp"
         android:layout_marginStart="320dp"
@@ -83,8 +71,8 @@
         android:layout_width="137dp"
         android:layout_height="137dp"
         android:layout_marginTop="90dp"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -110,19 +98,13 @@
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorTemp" />
 
-    <android.support.constraint.Group
-        android:id="@+id/grp_IndicatorLight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="prb_IndicatorLight,lbl_IndicatorLight,view3,lbl_TitleIndicatorLight" />
-
     <View
-        android:id="@+id/view3"
+        android:id="@+id/vw_IndicatorLight"
         android:layout_width="249dp"
         android:layout_height="211dp"
         android:layout_marginStart="47dp"
@@ -137,8 +119,8 @@
         android:layout_width="137dp"
         android:layout_height="137dp"
         android:layout_marginTop="340dp"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorLight"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -164,19 +146,13 @@
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorLight"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorLight"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorLight" />
 
-    <android.support.constraint.Group
-        android:id="@+id/grp_IndicatorHR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="lbl_IndicatorHR,view4,lbl_TitleIndicatorHR,prb_IndicatorHR" />
-
     <View
-        android:id="@+id/view4"
+        android:id="@+id/vw_IndicatorHR"
         android:layout_width="249dp"
         android:layout_height="211dp"
         android:layout_marginStart="320dp"
@@ -191,8 +167,8 @@
         android:layout_width="137dp"
         android:layout_height="137dp"
         android:layout_marginTop="340dp"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHR"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -218,9 +194,9 @@
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorHR"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHR"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR"
         app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHR" />
 
     <Button
@@ -263,7 +239,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txt_DescIndicators"
         app:layout_constraintEnd_toEndOf="@+id/txt_DescIndicators"
-        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="@+id/txt_DescIndicators"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -282,6 +258,6 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/btn_InterfaceBack"
         app:layout_constraintTop_toBottomOf="@+id/txt_Title"
-        tools:text="Selecciona tu medición" />
+        tools:text="@string/descpanel" />
 
 </android.support.constraint.ConstraintLayout>

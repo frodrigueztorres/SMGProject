@@ -1,10 +1,13 @@
 package com.example.felip.smgproyect;
 
+import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
-public class AdminMenu extends AppCompatActivity {
+public class AdminMenu extends AppCompatActivity implements View.OnClickListener {
 
 
     @Override
@@ -23,5 +26,29 @@ public class AdminMenu extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
 
+        ImageView indicatorView = (ImageView) findViewById(R.id.iw_btnAdminIndicators);
+        ImageView reportView = (ImageView) findViewById(R.id.iw_btnAdminReports);
+        ImageView userView = (ImageView) findViewById(R.id.iw_btnAdminUsers);
+
+        indicatorView.setOnClickListener(this);
+        reportView.setOnClickListener(this);
+        userView.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+        switch (v.getId()){
+            case R.id.iw_btnAdminIndicators:
+                i = new Intent(AdminMenu.this, IndicatorsMenu.class);startActivity(i);
+                break;
+            case R.id.iw_btnAdminReports:
+                /*i = new Intent(AdminMenu.this, IndicatorsMenu.class);startActivity(i);*/
+                break;
+            case R.id.iw_btnAdminUsers:
+                i = new Intent(AdminMenu.this, ListCreatedUsers.class);startActivity(i);
+                break;
+        }
     }
 }
+

@@ -34,7 +34,7 @@
     <string name="btnback">Volver</string>
     <string name="btnimport">Importar indicadores</string>
     <string name="titlepanel">INDICADORES</string>
-    <string name="descpanel">TextView</string>
+    <string name="descpanel">Selecciona tu medición</string>
     <string name="interfaceAdminUsers">AdminUsers</string>
     <string name="interfaceAdminRegistry">AdminRegistry</string>
     <string name="registro_hist_rico">Registro Histórico</string>

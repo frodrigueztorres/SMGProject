@@ -1,8 +1,10 @@
 package com.example.felip.smgproyect;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class DetailRegistryHS extends AppCompatActivity {
 
@@ -21,5 +23,16 @@ public class DetailRegistryHS extends AppCompatActivity {
                         // Hide the nav bar and status bar
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
+
+        Button btnBackIndicator = (Button) findViewById(R.id.btn_BackDetailIndicatorHS);
+
+        btnBackIndicator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DetailRegistryHS.this, IndicatorsMenu.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
