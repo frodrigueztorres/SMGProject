@@ -49,15 +49,15 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
                 startActivity(i);
                 break;
             case R.id.vw_IndicatorTemp:
-                i = new Intent(IndicatorsMenu.this, DetailRegistryHS.class);
+                i = new Intent(IndicatorsMenu.this, DetailRegistryTemp.class);
                 startActivity(i);
                 break;
             case R.id.vw_IndicatorLight:
-                i = new Intent(IndicatorsMenu.this, DetailRegistryHS.class);
+                i = new Intent(IndicatorsMenu.this, DetailRegistryLight.class);
                 startActivity(i);
                 break;
             case R.id.vw_IndicatorHR:
-                i = new Intent(IndicatorsMenu.this, DetailRegistryHS.class);
+                i = new Intent(IndicatorsMenu.this, DetailRegistryHR.class);
                 startActivity(i);
                 break;
             case R.id.btn_InterfaceBack:

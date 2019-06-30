@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8FB783"
+    tools:context=".DetailRegistryTemp">
+
+    <ProgressBar
+        android:id="@+id/pbr_DetailBarTemp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="145sp"
+        android:layout_height="145sp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginBottom="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_SubtitleIndicatorTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lbl_DetailIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/indicatorgood"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pbr_DetailBarTemp"
+        app:layout_constraintEnd_toEndOf="@+id/pbr_DetailBarTemp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/pbr_DetailBarTemp"
+        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarTemp"
+        app:layout_constraintVertical_bias="0.491" />
+
+    <TextView
+        android:id="@+id/lbl_SubtitleIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/temperatura"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarTemp" />
+
+    <TextView
+        android:id="@+id/lbl_TitleListTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="472dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/registro_hist_rico"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_TitleDetailIndicatorTemp" />
+
+    <TextView
+        android:id="@+id/lbl_TitleDetailIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/detalle_temperatura_ambiental"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/btn_BackDetailIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_background"
+        android:text="@string/btnback"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <TextView
+        android:id="@+id/lbl_NumberIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="132dp"
+        android:text="@string/_20"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_SubtitleIndicatorTemp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_ListIndicatorTemp"
+        android:layout_width="433dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="123dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_BackDetailIndicatorTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pbr_DetailBarTemp"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_TitleListTemp" />
+
+</android.support.constraint.ConstraintLayout>

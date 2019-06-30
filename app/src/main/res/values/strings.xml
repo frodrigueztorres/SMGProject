@@ -50,4 +50,10 @@
     <string name="editar_usuario">Editar Usuario</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="humedad_relativa">Humedad Relativa</string>
+    <string name="detalle_humedad_relativa">Detalle Humedad Relativa</string>
+    <string name="nivel_de_luz">Nivel de Luz</string>
+    <string name="detalle_nivel_de_luz">Detalle Nivel de Luz</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="detalle_temperatura_ambiental">Detalle Temperatura Ambiental</string>
 </resources>

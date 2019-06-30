@@ -10,6 +10,9 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DetailRegistryTemp"></activity>
+        <activity android:name=".DetailRegistryLight" />
+        <activity android:name=".DetailRegistryHR" />
         <activity android:name=".EditUser" />
         <activity android:name=".CreateUser" />
         <activity android:name=".ListCreatedUsers" />
