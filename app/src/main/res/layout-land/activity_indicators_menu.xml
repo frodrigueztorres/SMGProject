@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         android:id="@+id/lbl_IndicatorHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/indicatorlow"
+        android:text="@string/indicatorbad"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -32,13 +32,17 @@
 
     <ProgressBar
         android:id="@+id/prb_IndicatorHS"
-        style="?android:attr/progressBarStyle"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="137dp"
         android:layout_height="137dp"
         android:layout_marginTop="90dp"
+        android:max="100"
+        android:min="0"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_TitleIndicatorHS"
+        />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorHS"
@@ -260,4 +264,4 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_Title"
         tools:text="@string/descpanel" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

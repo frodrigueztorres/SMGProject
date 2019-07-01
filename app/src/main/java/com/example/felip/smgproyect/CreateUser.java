@@ -1,10 +1,22 @@
 package com.example.felip.smgproyect;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import butterknife.BindView;
 
 public class CreateUser extends AppCompatActivity {
+
+    @BindView(R.id.txt_NameCreateUser)
+    public EditText userName;
+
+    @BindView(R.id.txt_LastnameCreateUser)
+    public EditText lastName;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

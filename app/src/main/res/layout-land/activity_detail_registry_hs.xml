@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,16 +9,19 @@
 
     <ProgressBar
         android:id="@+id/pbr_DetailBarHS"
-        style="?android:attr/progressBarStyle"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="145sp"
-        android:layout_height="145sp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="181dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_SubtitleIndicatorHS"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="25"
+        android:progressTint="#FF0000"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbl_DetailIndicatorHS"
@@ -30,18 +33,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/pbr_DetailBarHS"
-        app:layout_constraintEnd_toEndOf="@+id/pbr_DetailBarHS"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/pbr_DetailBarHS"
-        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarHS"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintEnd_toEndOf="@+id/lbl_SubtitleIndicatorHS"
+        app:layout_constraintStart_toStartOf="@+id/lbl_SubtitleIndicatorHS" />
 
     <TextView
         android:id="@+id/lbl_SubtitleIndicatorHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/titlehs"
         android:textAlignment="center"
         android:textColor="@android:color/white"
@@ -104,19 +104,16 @@
         android:id="@+id/lbl_NumberIndicatorHS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="132dp"
         android:text="@string/_20"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="45sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_SubtitleIndicatorHS" />
+        app:layout_constraintBottom_toTopOf="@+id/lbl_DetailIndicatorHS"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_SubtitleIndicatorHS"
+        app:layout_constraintStart_toStartOf="@+id/lbl_SubtitleIndicatorHS" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ListIndicatorHS"
         android:layout_width="433dp"
         android:layout_height="135dp"
@@ -129,4 +126,4 @@
         app:layout_constraintStart_toEndOf="@+id/pbr_DetailBarHS"
         app:layout_constraintTop_toBottomOf="@+id/lbl_TitleListHS" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

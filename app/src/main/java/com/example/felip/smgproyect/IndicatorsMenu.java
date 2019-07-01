@@ -1,18 +1,57 @@
 package com.example.felip.smgproyect;
 
 import android.content.Intent;
-import android.support.constraint.Group;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class IndicatorsMenu extends AppCompatActivity implements View.OnClickListener{
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.felip.smgproyect.service.RetrofitInstance;
+import com.example.felip.smgproyect.service.SensorsServiceApi;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import es.dmoral.toasty.Toasty;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class IndicatorsMenu extends AppCompatActivity implements View.OnClickListener {
+
+    @BindView(R.id.prb_IndicatorHS)
+    public ProgressBar floorHumidityProgress;
+
+    @BindView(R.id.prb_IndicatorHR)
+    public ProgressBar ambientHumidityProgress;
+
+    @BindView(R.id.prb_IndicatorLight)
+    public ProgressBar lightProgress;
+
+    @BindView(R.id.prb_IndicatorTemp)
+    public ProgressBar temperatureProgress;
+
+    @BindView(R.id.lbl_IndicatorHS)
+    public TextView lblFloorHumidityProgress;
+
+    @BindView(R.id.lbl_IndicatorTemp)
+    public TextView lblTemperatureProgress;
+
+    @BindView(R.id.lbl_IndicatorLight)
+    public TextView lblLightProgress;
+
+    @BindView(R.id.lbl_IndicatorHR)
+    public TextView lblAmbientHumidityProgress;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indicators_menu);
+        ButterKnife.bind(this);
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -24,6 +63,12 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
                         // Hide the nav bar and status bar
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
+
+        SensorsServiceApi service = RetrofitInstance.getRetrofitInstance().create(SensorsServiceApi.class);
+        getFloorHumidity(service);
+        getLight(service);
+        getAmbientHumidity(service);
+        getTemperature(service);
 
         View indicatorHS = (View) findViewById(R.id.vw_IndicatorHS);
         View indicatorTemp = (View) findViewById(R.id.vw_IndicatorTemp);
@@ -40,10 +85,87 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
         btnImport.setOnClickListener(this);
     }
 
+    private void getFloorHumidity(SensorsServiceApi service) {
+        Call<Integer> call = service.getFloorHumidity();
+        call.enqueue(new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                setMessage(lblFloorHumidityProgress, response.body());
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+                Toasty.error(
+                        getApplicationContext(),
+                        "Error: " +  t.getLocalizedMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+    }
+
+    private void getLight(SensorsServiceApi service) {
+        Call<Integer> call = service.getLight();
+        call.enqueue(new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                setMessage(lblLightProgress, response.body());
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+                Toasty.error(
+                        getApplicationContext(),
+                        "Error: " +  t.getLocalizedMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+    }
+
+    private void getAmbientHumidity(SensorsServiceApi service) {
+        Call<Integer> call = service.getAmbientHumidity();
+        call.enqueue(new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                ambientHumidityProgress.setProgress(response.body());
+                setMessage(lblAmbientHumidityProgress, response.body());
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+                Toasty.error(
+                        getApplicationContext(),
+                        "Error: " +  t.getLocalizedMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+    }
+
+    private void getTemperature(SensorsServiceApi service) {
+        Call<Integer> call = service.getTemperature();
+        call.enqueue(new Callback<Integer>() {
+            @Override
+            public void onResponse(Call<Integer> call, Response<Integer> response) {
+                setMessage(lblTemperatureProgress, response.body());
+            }
+
+            @Override
+            public void onFailure(Call<Integer> call, Throwable t) {
+                Toasty.error(
+                        getApplicationContext(),
+                        "Error: " +  t.getLocalizedMessage(),
+                        Toast.LENGTH_LONG
+                ).show();
+            }
+        });
+    }
+
     @Override
     public void onClick(View v) {
         Intent i;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.vw_IndicatorHS:
                 i = new Intent(IndicatorsMenu.this, DetailRegistryHS.class);
                 startActivity(i);
@@ -69,5 +191,21 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
                 startActivity(i);
                 break;
         }
+    }
+
+    private void setMessage(TextView textView, int value) {
+        if (isBetween(value, 0, 25)) {
+            textView.setText("Bajo");
+        } else if (isBetween(value, 26, 50)) {
+            textView.setText("Medio");
+        } else if (isBetween(value, 51, 75)) {
+            textView.setText("Óptimo");
+        } else if (isBetween(value, 76, 100)) {
+            textView.setText("Crítico");
+        }
+    }
+
+    public static boolean isBetween(int x, int lower, int upper) {
+        return lower <= x && x <= upper;
     }
 }
