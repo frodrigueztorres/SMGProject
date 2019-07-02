@@ -19,7 +19,6 @@
     <string name="indicatorlabel">Indicadores</string>
     <string name="bgindicators">bgindicators</string>
     <string name="bgreports">bgreports</string>
-
     <string name="title_activity_indicator_menu">indicatorMenu</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -48,7 +47,6 @@
     <string name="nombre">Nombre</string>
     <string name="repetir_contrase_a">Repetir contraseña</string>
     <string name="editar_usuario">Editar Usuario</string>
-
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="humedad_relativa">Humedad Relativa</string>
     <string name="detalle_humedad_relativa">Detalle Humedad Relativa</string>
@@ -56,4 +54,6 @@
     <string name="detalle_nivel_de_luz">Detalle Nivel de Luz</string>
     <string name="temperatura">Temperatura</string>
     <string name="detalle_temperatura_ambiental">Detalle Temperatura Ambiental</string>
+    <string name="error_user">Usuario no encontrado</string>
+    <string name="success_user">Bienvenido %1s</string>
 </resources>

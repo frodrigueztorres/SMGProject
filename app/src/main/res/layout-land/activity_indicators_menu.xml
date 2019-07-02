@@ -25,24 +25,24 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorHS"
-        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorHS"
-        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorHS"
-        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorHS" />
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHS" />
 
     <ProgressBar
         android:id="@+id/prb_IndicatorHS"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="137dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="90dp"
+        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:max="100"
-        android:min="0"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_TitleIndicatorHS"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lbl_TitleIndicatorHS"
-        />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorHS" />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorHS"
@@ -56,8 +56,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorHS"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
-        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
-        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHS" />
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS" />
 
     <View
         android:id="@+id/vw_IndicatorTemp"
@@ -71,31 +70,38 @@
 
     <ProgressBar
         android:id="@+id/prb_IndicatorTemp"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="137dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="90dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:max="100"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_TitleIndicatorTemp"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorTemp" />
 
     <TextView
         android:id="@+id/lbl_IndicatorTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/indicatormedium"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorTemp"
-        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorTemp"
-        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorTemp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_TitleIndicatorTemp"
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
         app:layout_constraintTop_toTopOf="@+id/prb_IndicatorTemp" />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/titletemp"
         android:textAlignment="center"
@@ -103,9 +109,8 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorTemp"
-        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
-        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
-        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorTemp" />
+        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorTemp" />
 
     <View
         android:id="@+id/vw_IndicatorLight"
@@ -119,13 +124,18 @@
 
     <ProgressBar
         android:id="@+id/prb_IndicatorLight"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="137dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="340dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:max="100"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_TitleIndicatorLight"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorLight"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorLight" />
 
     <TextView
         android:id="@+id/lbl_IndicatorLight"
@@ -135,14 +145,13 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorLight"
-        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorLight"
-        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorLight"
-        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorLight" />
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorLight"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorLight" />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorLight"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/titlelight"
@@ -152,8 +161,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorLight"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorLight"
-        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight"
-        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorLight" />
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight" />
 
     <View
         android:id="@+id/vw_IndicatorHR"
@@ -167,26 +175,31 @@
 
     <ProgressBar
         android:id="@+id/prb_IndicatorHR"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="137dp"
-        android:layout_height="137dp"
-        android:layout_marginTop="340dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:max="100"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_TitleIndicatorHR"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHR"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorHR" />
 
     <TextView
         android:id="@+id/lbl_IndicatorHR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="@string/indicatorbad"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/prb_IndicatorHR"
-        app:layout_constraintEnd_toEndOf="@+id/prb_IndicatorHR"
-        app:layout_constraintStart_toStartOf="@+id/prb_IndicatorHR"
-        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorHR" />
+        app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHR"
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR"
+        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHR" />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorHR"
@@ -200,8 +213,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/vw_IndicatorHR"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHR"
-        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR"
-        app:layout_constraintTop_toBottomOf="@+id/prb_IndicatorHR" />
+        app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR" />
 
     <Button
         android:id="@+id/btn_InterfaceBack"

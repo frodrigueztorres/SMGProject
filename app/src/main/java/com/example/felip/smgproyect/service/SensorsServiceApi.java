@@ -5,6 +5,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public interface SensorsServiceApi {
     @GET("/floor-humidity")
@@ -19,12 +20,8 @@ public interface SensorsServiceApi {
     @GET("/temperature")
     Call<Integer> getTemperature();
 
-    @GET("/{conditions}?all=true")
-    Call<List<ConditionsResponse>> getConditions();
+    @GET("/{condition}?all=true")
+    Call<List<ConditionsResponse>> getConditions(@Path("condition") String condition);
 
 }
 
-class ConditionsResponse{
-    private String Date;
-    private int value;
-}

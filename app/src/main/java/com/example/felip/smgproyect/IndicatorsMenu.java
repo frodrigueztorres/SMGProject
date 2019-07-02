@@ -90,6 +90,7 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
         call.enqueue(new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
+                floorHumidityProgress.setProgress(response.body());
                 setMessage(lblFloorHumidityProgress, response.body());
             }
 
@@ -109,6 +110,7 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
         call.enqueue(new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
+                lightProgress.setProgress(response.body());
                 setMessage(lblLightProgress, response.body());
             }
 
@@ -148,6 +150,7 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
         call.enqueue(new Callback<Integer>() {
             @Override
             public void onResponse(Call<Integer> call, Response<Integer> response) {
+                temperatureProgress.setProgress(response.body());
                 setMessage(lblTemperatureProgress, response.body());
             }
 
