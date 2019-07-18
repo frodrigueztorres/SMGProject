@@ -95,16 +95,16 @@ public class DetailRegistryLight extends AppCompatActivity {
     }
 
     private void getActualCondition(SensorsServiceApi service) {
-        Call<Integer> call = service.getCondition("light");
-        call.enqueue(new Callback<Integer>() {
+        Call<ConditionsResponse> call = service.getCondition("light");
+        call.enqueue(new Callback<ConditionsResponse>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                progressBar.setProgress(response.body());
-                setMessage(labelProgress, response.body(), LIGHT);
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                progressBar.setProgress(response.body().getValue());
+                setMessage(labelProgress, response.body().getValue(), LIGHT);
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
                 Toasty.error(
                         getApplicationContext(),
                         "Error: " + t.getLocalizedMessage(),

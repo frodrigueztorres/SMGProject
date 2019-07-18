@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.felip.smgproyect.data.DatabaseInstance;
 import com.example.felip.smgproyect.data.SMGDatabase;
 import com.example.felip.smgproyect.data.model.ConditionConfiguration;
+import com.example.felip.smgproyect.service.ConditionsResponse;
 import com.example.felip.smgproyect.service.RetrofitInstance;
 import com.example.felip.smgproyect.service.SensorsServiceApi;
 
@@ -104,17 +105,17 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
     }
 
     private void getFloorHumidity(SensorsServiceApi service) {
-        Call<Integer> call = service.getCondition("floor-humidity");
-        call.enqueue(new Callback<Integer>() {
+        Call<ConditionsResponse> call = service.getCondition("floor-humidity");
+        call.enqueue(new Callback<ConditionsResponse>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                floorHumidityProgress.setProgress(response.body());
-                setMessage(lblFloorHumidityProgress, response.body(), FLOOR_HUMIDITY);
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                floorHumidityProgress.setProgress(response.body().getValue());
+                setMessage(lblFloorHumidityProgress, response.body().getValue(), FLOOR_HUMIDITY);
             }
 
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
                 Toasty.error(
                         getApplicationContext(),
                         "Error: " + t.getLocalizedMessage(),
@@ -132,16 +133,16 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
     }
 
     private void getLight(SensorsServiceApi service) {
-        Call<Integer> call = service.getCondition("light");
-        call.enqueue(new Callback<Integer>() {
+        Call<ConditionsResponse> call = service.getCondition("light");
+        call.enqueue(new Callback<ConditionsResponse>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                lightProgress.setProgress(response.body());
-                setMessage(lblLightProgress, response.body(), LIGHT);
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                lightProgress.setProgress(response.body().getValue());
+                setMessage(lblLightProgress, response.body().getValue(), LIGHT);
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
                 Toasty.error(
                         getApplicationContext(),
                         "Error: " + t.getLocalizedMessage(),
@@ -152,16 +153,16 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
     }
 
     private void getAmbientHumidity(SensorsServiceApi service) {
-        Call<Integer> call = service.getCondition("ambient-humidity");
-        call.enqueue(new Callback<Integer>() {
+        Call<ConditionsResponse> call = service.getCondition("ambient-humidity");
+        call.enqueue(new Callback<ConditionsResponse>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                ambientHumidityProgress.setProgress(response.body());
-                setMessage(lblAmbientHumidityProgress, response.body(), AMBIENT_HUMIDITY);
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                ambientHumidityProgress.setProgress(response.body().getValue());
+                setMessage(lblAmbientHumidityProgress, response.body().getValue(), AMBIENT_HUMIDITY);
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
                 Toasty.error(
                         getApplicationContext(),
                         "Error: " + t.getLocalizedMessage(),
@@ -172,16 +173,16 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
     }
 
     private void getTemperature(SensorsServiceApi service) {
-        Call<Integer> call = service.getCondition("temperature");
-        call.enqueue(new Callback<Integer>() {
+        Call<ConditionsResponse> call = service.getCondition("temperature");
+        call.enqueue(new Callback<ConditionsResponse>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                temperatureProgress.setProgress(response.body());
-                setMessage(lblTemperatureProgress, response.body(), TEMPERATURE);
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                temperatureProgress.setProgress(response.body().getValue());
+                setMessage(lblTemperatureProgress, response.body().getValue(), TEMPERATURE);
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
                 Toasty.error(
                         getApplicationContext(),
                         "Error: " + t.getLocalizedMessage(),
