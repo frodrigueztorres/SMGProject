@@ -56,4 +56,6 @@
     <string name="detalle_temperatura_ambiental">Detalle Temperatura Ambiental</string>
     <string name="error_user">Usuario no encontrado</string>
     <string name="success_user">Bienvenido %1s</string>
+    <string name="no_data_available">No data available</string>
+    <string name="title_indicators_customization">Edición de indicadores</string>
 </resources>

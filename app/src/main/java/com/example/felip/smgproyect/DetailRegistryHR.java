@@ -1,17 +1,46 @@
 package com.example.felip.smgproyect;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.felip.smgproyect.adapter.ConditionAdapter;
+import com.example.felip.smgproyect.service.ConditionsResponse;
+import com.example.felip.smgproyect.service.SensorsServiceApi;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import es.dmoral.toasty.Toasty;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class DetailRegistryHR extends AppCompatActivity {
+
+    @BindView(R.id.rv_ListIndicatorHS)
+    RecyclerView indicatorsRecyclerView;
+
+    private ConditionAdapter conditionAdapter;
+    private ArrayList<ConditionsResponse> conditionsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_registry_hr);
+
+        indicatorsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        conditionsList = new ArrayList<>();
+
+        conditionAdapter = new ConditionAdapter(this, conditionsList);
+        indicatorsRecyclerView.setAdapter(conditionAdapter);
+
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -24,15 +53,34 @@ public class DetailRegistryHR extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
 
-        Button btnBackIndicator = (Button) findViewById(R.id.btn_BackDetailIndicatorHR);
+        Button btnBackIndicator = findViewById(R.id.btn_BackDetailIndicatorHR);
 
-        btnBackIndicator.setOnClickListener(new View.OnClickListener() {
+        btnBackIndicator.setOnClickListener(v -> {
+            Intent i = new Intent(DetailRegistryHR.this, IndicatorsMenu.class);
+            startActivity(i);
+        });
+    }
+
+    private void getTemperature(SensorsServiceApi service) {
+        Call<List<ConditionsResponse>> call = service.getConditions("floor-humidity");
+        call.enqueue(new Callback<List<ConditionsResponse>>() {
             @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DetailRegistryHR.this, IndicatorsMenu.class);
-                startActivity(i);
+            public void onResponse(Call<List<ConditionsResponse>> call, Response<List<ConditionsResponse>> response) {
+                Toasty.success(getApplicationContext(), response.toString()).show();
+                if (response.body() != null) {
+                    conditionsList.addAll(response.body());
+                    conditionAdapter.notifyDataSetChanged();
+                } else {
+                    Toasty.info(getApplicationContext(), getString(R.string.no_data_available)).show();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<ConditionsResponse>> call, Throwable t) {
+                Toasty.error(getApplicationContext(), t.getMessage()).show();
+
             }
         });
-
     }
 }

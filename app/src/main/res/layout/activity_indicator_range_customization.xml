@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8FB783"
+    tools:context=".DetailRegistryHR">
+
+    <TextView
+        android:id="@+id/lbl_TitleIndicatorsCustomization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/title_indicators_customization"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+
+    <Button
+        android:id="@+id/btn_saveIndicatorsCustomization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_background"
+        android:text="Guardar"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toTopOf="@+id/btn_saveIndicatorsCustomization"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_TitleIndicatorsCustomization">
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView android:text="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:text="Bajo"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:text="Medio"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:text="Alto"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Humedad Ambiental"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_humiditya_low"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_humiditya_medium"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_humiditya_high"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Humedad Suelo"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_humidityf_low"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_humidityf_medium"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_humidityf_high"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Temperatura"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_temperature_low"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_temperature_medium"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_temperature_high"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Luz"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_light_low"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_light_medium"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+            <EditText
+                android:id="@+id/edit_light_high"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:shadowColor="@android:color/white"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@android:color/white" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,6 +36,12 @@ public class IntroMenu extends AppCompatActivity {
         setContentView(R.layout.activity_intro_menu);
         ButterKnife.bind(this);
         View decorView = getWindow().getDecorView();
+        SMGDatabase database = DatabaseInstance.getDatabaseInstance(getApplicationContext());
+        // THis is just to initialize the database and create the default user
+        database.userDao().getUserByUsernameAndPassword("", "")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_IMMERSIVE
                         | View.SYSTEM_UI_FLAG_LAYOUT_STABLE

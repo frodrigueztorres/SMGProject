@@ -27,7 +27,6 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
 
         ImageView indicatorView = (ImageView) findViewById(R.id.iw_btnAdminIndicators);
-        ImageView reportView = (ImageView) findViewById(R.id.iw_btnAdminReports);
         ImageView userView = (ImageView) findViewById(R.id.iw_btnAdminUsers);
 
         indicatorView.setOnClickListener(this);
@@ -41,9 +40,6 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()){
             case R.id.iw_btnAdminIndicators:
                 i = new Intent(AdminMenu.this, IndicatorsMenu.class);startActivity(i);
-                break;
-            case R.id.iw_btnAdminReports:
-                /*i = new Intent(AdminMenu.this, IndicatorsMenu.class);startActivity(i);*/
                 break;
             case R.id.iw_btnAdminUsers:
                 i = new Intent(AdminMenu.this, ListCreatedUsers.class);startActivity(i);

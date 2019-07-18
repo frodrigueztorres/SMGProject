@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_CreateUser"
+        android:id="@+id/btn_CreateUserFromList"
         android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/rv_ListCreatedUsers"
-        app:layout_constraintTop_toBottomOf="@+id/btn_CreateUser" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_CreateUserFromList" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ListCreatedUsers"
@@ -60,7 +60,7 @@
         android:layout_marginEnd="145dp"
         android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_CreateUser"
+        app:layout_constraintEnd_toStartOf="@+id/btn_CreateUserFromList"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_TitleUserList" />
 </androidx.constraintlayout.widget.ConstraintLayout>

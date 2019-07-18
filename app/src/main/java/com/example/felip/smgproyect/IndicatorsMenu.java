@@ -15,6 +15,7 @@ import com.example.felip.smgproyect.service.SensorsServiceApi;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -75,14 +76,12 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
         View indicatorLight = (View) findViewById(R.id.vw_IndicatorLight);
         View indicatorHr = (View) findViewById(R.id.vw_IndicatorHR);
         Button btnBack = (Button) findViewById(R.id.btn_InterfaceBack);
-        Button btnImport = (Button) findViewById(R.id.btn_ImportIndicators);
 
         indicatorHS.setOnClickListener(this);
         indicatorTemp.setOnClickListener(this);
         indicatorLight.setOnClickListener(this);
         indicatorHr.setOnClickListener(this);
         btnBack.setOnClickListener(this);
-        btnImport.setOnClickListener(this);
     }
 
     private void getFloorHumidity(SensorsServiceApi service) {
@@ -103,6 +102,13 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
                 ).show();
             }
         });
+    }
+
+    @OnClick(R.id.btn_ImportIndicators)
+    public void goToCustomization(){
+        Intent i = new Intent(IndicatorsMenu.this, IndicatorRangeCustomization.class);
+        startActivity(i);
+
     }
 
     private void getLight(SensorsServiceApi service) {
@@ -187,10 +193,6 @@ public class IndicatorsMenu extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.btn_InterfaceBack:
                 i = new Intent(IndicatorsMenu.this, AdminMenu.class);
-                startActivity(i);
-                break;
-            case R.id.btn_ImportIndicators:
-                i = new Intent(IndicatorsMenu.this, DetailRegistryHS.class);
                 startActivity(i);
                 break;
         }

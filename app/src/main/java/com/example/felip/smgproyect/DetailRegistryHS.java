@@ -39,7 +39,7 @@ public class DetailRegistryHS extends AppCompatActivity {
         ButterKnife.bind(this);
 
         indicatorsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        conditionsList = new ArrayList<ConditionsResponse>();
+        conditionsList = new ArrayList<>();
 
         conditionAdapter = new ConditionAdapter(this, conditionsList);
         indicatorsRecyclerView.setAdapter(conditionAdapter);
@@ -61,12 +61,9 @@ public class DetailRegistryHS extends AppCompatActivity {
         SensorsServiceApi service = RetrofitInstance.getRetrofitInstance().create(SensorsServiceApi.class);
         getTemperature(service);
 
-        btnBackIndicator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(DetailRegistryHS.this, IndicatorsMenu.class);
-                startActivity(i);
-            }
+        btnBackIndicator.setOnClickListener(v -> {
+            Intent i = new Intent(DetailRegistryHS.this, IndicatorsMenu.class);
+            startActivity(i);
         });
 
     }
@@ -77,14 +74,18 @@ public class DetailRegistryHS extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<ConditionsResponse>> call, Response<List<ConditionsResponse>> response) {
                 Toasty.success(getApplicationContext(), response.toString()).show();
-                conditionsList.addAll(response.body());
-                conditionAdapter.notifyDataSetChanged();
-                String perro = "perro";
+                if (response.body() != null) {
+                    conditionsList.addAll(response.body());
+                    conditionAdapter.notifyDataSetChanged();
+                } else {
+                    Toasty.info(getApplicationContext(), getString(R.string.no_data_available)).show();
+
+                }
             }
 
             @Override
             public void onFailure(Call<List<ConditionsResponse>> call, Throwable t) {
-                Toasty.error(getApplicationContext(), t.getMessage());
+                Toasty.error(getApplicationContext(), t.getMessage()).show();
 
             }
         });
