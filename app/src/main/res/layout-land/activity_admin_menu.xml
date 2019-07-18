@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,7 @@
     android:background="#8FB783"
     tools:context=".AdminMenu">
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/grp_AdminIndicatorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,13 +15,12 @@
 
     <ImageView
         android:id="@+id/iw_btnAdminUsers"
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
         android:layout_height="600dp"
         android:background="@drawable/bg_users"
         android:contentDescription="@string/interfaceAdminUsers"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iw_btnAdminReports"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -34,12 +33,12 @@
         android:textColor="@android:color/white"
         android:textSize="42sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/lblLabelAdminReports"
+        app:layout_constraintBottom_toBottomOf="@+id/lblLabelAdminIndicators"
         app:layout_constraintEnd_toEndOf="@+id/iw_btnAdminUsers"
         app:layout_constraintStart_toStartOf="@+id/iw_btnAdminUsers"
-        app:layout_constraintTop_toTopOf="@+id/lblLabelAdminReports" />
+        app:layout_constraintTop_toTopOf="@+id/lblLabelAdminIndicators" />
 
-    <android.support.constraint.Group
+    <androidx.constraintlayout.widget.Group
         android:id="@+id/grp_AdminReportButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,12 +46,11 @@
 
     <ImageView
         android:id="@+id/iw_btnAdminIndicators"
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
         android:layout_height="600dp"
         android:background="@drawable/bg_indicators"
         android:contentDescription="@string/interfaceAdminRegistry"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/iw_btnAdminReports"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,13 +68,13 @@
         app:layout_constraintStart_toStartOf="@+id/iw_btnAdminIndicators"
         app:layout_constraintTop_toTopOf="@+id/iw_btnAdminIndicators" />
 
-    <android.support.constraint.Group
+<!--    <androidx.constraintlayout.widget.Group
         android:id="@+id/grp_AdminUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="iw_btnAdminReports,lblLabelAdminReports" />
+        app:constraint_referenced_ids="iw_btnAdminReports,lblLabelAdminReports" />-->
 
-    <ImageView
+<!--    <ImageView
         android:id="@+id/iw_btnAdminReports"
         android:layout_width="320dp"
         android:layout_height="600dp"
@@ -100,6 +98,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/lblLabelAdminIndicators"
         app:layout_constraintEnd_toEndOf="@+id/iw_btnAdminReports"
         app:layout_constraintStart_toStartOf="@+id/iw_btnAdminReports"
-        app:layout_constraintTop_toTopOf="@+id/lblLabelAdminIndicators" />
+        app:layout_constraintTop_toTopOf="@+id/lblLabelAdminIndicators" />-->
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
