@@ -54,7 +54,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ListCreatedUsers"
         android:layout_width="516dp"
-        android:layout_height="374dp"
+        android:layout_height="340dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="145dp"
@@ -62,5 +62,60 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_CreateUserFromList"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_TitleUserList"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <View
+        android:layout_width="516dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:background="#C28B4D"
+        android:backgroundTint="#C28B4D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/nombre"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/apellido"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/nombre_de_usuario"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/correo_electr_nico"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/lbl_TitleUserList" />
 </androidx.constraintlayout.widget.ConstraintLayout>

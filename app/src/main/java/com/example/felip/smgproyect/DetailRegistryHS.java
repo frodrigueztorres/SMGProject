@@ -104,16 +104,16 @@ public class DetailRegistryHS extends AppCompatActivity {
     }
 
     private void getActualCondition(SensorsServiceApi service) {
-        Call<Integer> call = service.getCondition("ambient-humidity");
-        call.enqueue(new Callback<Integer>() {
+        Call<ConditionsResponse> call = service.getCondition("floor-humidity");
+        call.enqueue(new Callback<ConditionsResponse>() {
             @Override
-            public void onResponse(Call<Integer> call, Response<Integer> response) {
-                progressBar.setProgress(response.body());
-                setMessage(labelProgress, response.body(), AMBIENT_HUMIDITY);
+            public void onResponse(Call<ConditionsResponse> call, Response<ConditionsResponse> response) {
+                progressBar.setProgress(response.body().getValue());
+                setMessage(labelProgress, response.body().getValue(), AMBIENT_HUMIDITY);
             }
 
             @Override
-            public void onFailure(Call<Integer> call, Throwable t) {
+            public void onFailure(Call<ConditionsResponse> call, Throwable t) {
                 Toasty.error(
                         getApplicationContext(),
                         "Error: " + t.getLocalizedMessage(),
@@ -151,7 +151,7 @@ public class DetailRegistryHS extends AppCompatActivity {
         call.enqueue(new Callback<List<ConditionsResponse>>() {
             @Override
             public void onResponse(Call<List<ConditionsResponse>> call, Response<List<ConditionsResponse>> response) {
-                Toasty.success(getApplicationContext(), response.toString()).show();
+                // Toasty.success(getApplicationContext(), response.toString()).show();
                 if (response.body() != null) {
                     conditionsList.addAll(response.body());
                     conditionAdapter.notifyDataSetChanged();

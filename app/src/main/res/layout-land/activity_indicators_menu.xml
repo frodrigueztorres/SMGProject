@@ -32,8 +32,8 @@
     <ProgressBar
         android:id="@+id/prb_IndicatorHS"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_height="20dp"
         android:layout_width="0dp"
+        android:layout_height="90dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:max="100"
@@ -41,8 +41,10 @@
         android:paddingEnd="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/lbl_TitleIndicatorHS"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHS"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHS"
-        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorHS" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorHS"
+        app:layout_constraintVertical_bias="0.247" />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorHS"
@@ -71,8 +73,8 @@
     <ProgressBar
         android:id="@+id/prb_IndicatorTemp"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_height="20dp"
         android:layout_width="0dp"
+        android:layout_height="90dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:max="100"
@@ -80,8 +82,10 @@
         android:paddingEnd="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/lbl_TitleIndicatorTemp"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
-        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorTemp" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintVertical_bias="0.247" />
 
     <TextView
         android:id="@+id/lbl_IndicatorTemp"
@@ -94,8 +98,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lbl_TitleIndicatorTemp"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorTemp"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorTemp"
-        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorTemp" />
+        app:layout_constraintTop_toTopOf="@+id/prb_IndicatorTemp"
+        app:layout_constraintVertical_bias="0.882" />
 
     <TextView
         android:id="@+id/lbl_TitleIndicatorTemp"
@@ -125,8 +131,8 @@
     <ProgressBar
         android:id="@+id/prb_IndicatorLight"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_height="20dp"
         android:layout_width="0dp"
+        android:layout_height="90dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:max="100"
@@ -134,8 +140,10 @@
         android:paddingEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/lbl_TitleIndicatorLight"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorLight"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorLight"
-        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorLight" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorLight"
+        app:layout_constraintVertical_bias="0.492" />
 
     <TextView
         android:id="@+id/lbl_IndicatorLight"
@@ -176,8 +184,8 @@
     <ProgressBar
         android:id="@+id/prb_IndicatorHR"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_height="20dp"
         android:layout_width="0dp"
+        android:layout_height="90dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:max="100"
@@ -185,8 +193,10 @@
         android:paddingEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/lbl_TitleIndicatorHR"
         app:layout_constraintEnd_toEndOf="@+id/vw_IndicatorHR"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/vw_IndicatorHR"
-        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorHR" />
+        app:layout_constraintTop_toTopOf="@+id/vw_IndicatorHR"
+        app:layout_constraintVertical_bias="0.492" />
 
     <TextView
         android:id="@+id/lbl_IndicatorHR"
