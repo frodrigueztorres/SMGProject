@@ -57,16 +57,6 @@ public class IndicatorRangeCustomization extends AppCompatActivity {
         setContentView(R.layout.activity_indicator_range_customization);
         ButterKnife.bind(this);
 
-        SMGDatabase database = DatabaseInstance.getDatabaseInstance(getApplicationContext());
-
-        database.configurationDao().getAll()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnSuccess(this::fillData)
-                .doOnComplete(() -> Toasty.error(getApplicationContext(), "Error: no se encontró data").show())
-                .doOnError(t -> Log.e("", "Error: " + t.getMessage()))
-                .subscribe();
-
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -78,6 +68,17 @@ public class IndicatorRangeCustomization extends AppCompatActivity {
                         // Hide the nav bar and status bar
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
+
+        SMGDatabase database = DatabaseInstance.getDatabaseInstance(getApplicationContext());
+
+        database.configurationDao().getAll()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnSuccess(this::fillData)
+                .doOnComplete(() -> Toasty.error(getApplicationContext(), "Error: no se encontró data").show())
+                .doOnError(t -> Log.e("", "Error: " + t.getMessage()))
+                .subscribe();
+
     }
 
     private void fillData(List<ConditionConfiguration> conditionConfigurations) {

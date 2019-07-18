@@ -30,7 +30,6 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
         ImageView userView = (ImageView) findViewById(R.id.iw_btnAdminUsers);
 
         indicatorView.setOnClickListener(this);
-        reportView.setOnClickListener(this);
         userView.setOnClickListener(this);
     }
 

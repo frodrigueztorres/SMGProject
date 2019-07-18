@@ -8,20 +8,23 @@
     tools:context=".DetailRegistryHR">
 
     <ProgressBar
-        android:id="@+id/pbr_DetailBarHR"
-        style="?android:attr/progressBarStyle"
+        android:id="@+id/pbr_DetailBarHr"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="145sp"
-        android:layout_height="145sp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="181dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_SubtitleIndicatorHR"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="25"
+        android:progressTint="#FF0000"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lbl_DetailIndicatorHR"
+        android:id="@+id/lbl_DetailIndicatorHr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/indicatorgood"
@@ -29,26 +32,36 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/pbr_DetailBarHR"
-        app:layout_constraintEnd_toEndOf="@+id/pbr_DetailBarHR"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/pbr_DetailBarHR"
-        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarHR"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintBottom_toTopOf="@+id/pbr_DetailBarHr"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_SubtitleIndicatorHr"
+        app:layout_constraintStart_toStartOf="@+id/lbl_SubtitleIndicatorHr" />
 
     <TextView
-        android:id="@+id/lbl_SubtitleIndicatorHR"
+        android:id="@+id/lbl_SubtitleIndicatorHr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/humedad_relativa"
+        android:layout_marginTop="10dp"
+        android:text="@string/titlehr"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarHR" />
+        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarHr" />
+
+    <TextView
+        android:id="@+id/lbl_NumberIndicatorHR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_20"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_DetailIndicatorHr"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_SubtitleIndicatorHr"
+        app:layout_constraintStart_toStartOf="@+id/lbl_SubtitleIndicatorHr" />
 
     <TextView
         android:id="@+id/lbl_TitleListHR"
@@ -100,33 +113,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86" />
 
-    <TextView
-        android:id="@+id/lbl_NumberIndicatorHR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="132dp"
-        android:text="@string/_20"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_SubtitleIndicatorHR" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_ListIndicatorHR"
+        android:id="@+id/rv_ListIndicatorHr"
         android:layout_width="433dp"
         android:layout_height="135dp"
-        android:layout_marginStart="211dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="123dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_BackDetailIndicatorHR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/pbr_DetailBarHR"
         app:layout_constraintTop_toBottomOf="@+id/lbl_TitleListHR" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

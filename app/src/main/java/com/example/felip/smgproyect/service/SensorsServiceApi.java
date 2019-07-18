@@ -8,19 +8,10 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface SensorsServiceApi {
-    @GET("/floor-humidity")
-    Call<Integer> getFloorHumidity();
+    @GET("/{condition}/last")
+    Call<Integer> getCondition(@Path("condition")String condition);
 
-    @GET("/light")
-    Call<Integer> getLight();
-
-    @GET("/ambient-humidity")
-    Call<Integer> getAmbientHumidity();
-
-    @GET("/temperature")
-    Call<Integer> getTemperature();
-
-    @GET("/{condition}?all=true")
+    @GET("/{condition}")
     Call<List<ConditionsResponse>> getConditions(@Path("condition") String condition);
 
 }

@@ -9,16 +9,19 @@
 
     <ProgressBar
         android:id="@+id/pbr_DetailBarTemp"
-        style="?android:attr/progressBarStyle"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="145sp"
-        android:layout_height="145sp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="181dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_SubtitleIndicatorTemp"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="25"
+        android:progressTint="#FF0000"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbl_DetailIndicatorTemp"
@@ -30,25 +33,36 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/pbr_DetailBarTemp"
-        app:layout_constraintEnd_toEndOf="@+id/pbr_DetailBarTemp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/pbr_DetailBarTemp"
-        app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarTemp"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintEnd_toEndOf="@+id/lbl_SubtitleIndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/lbl_SubtitleIndicatorTemp" />
 
     <TextView
         android:id="@+id/lbl_SubtitleIndicatorTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/temperatura"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/titletemp"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pbr_DetailBarTemp" />
+
+    <TextView
+        android:id="@+id/lbl_NumberIndicatorTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_20"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_DetailIndicatorTemp"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_SubtitleIndicatorTemp"
+        app:layout_constraintStart_toStartOf="@+id/lbl_SubtitleIndicatorTemp" />
+
 
     <TextView
         android:id="@+id/lbl_TitleListTemp"
@@ -100,21 +114,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86" />
 
-    <TextView
-        android:id="@+id/lbl_NumberIndicatorTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="132dp"
-        android:text="@string/_20"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_SubtitleIndicatorTemp" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ListIndicatorTemp"
