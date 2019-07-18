@@ -15,7 +15,7 @@
 
     <ImageView
         android:id="@+id/iw_btnAdminUsers"
-        android:layout_width="wrap_content"
+        android:layout_width="480dp"
         android:layout_height="600dp"
         android:background="@drawable/bg_users"
         android:contentDescription="@string/interfaceAdminUsers"
@@ -46,7 +46,7 @@
 
     <ImageView
         android:id="@+id/iw_btnAdminIndicators"
-        android:layout_width="wrap_content"
+        android:layout_width="480dp"
         android:layout_height="600dp"
         android:background="@drawable/bg_indicators"
         android:contentDescription="@string/interfaceAdminRegistry"
